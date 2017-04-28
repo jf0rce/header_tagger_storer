@@ -4,9 +4,14 @@ class UrlAddressesController < ApplicationController
     head :ok
   end
 
+  def index
+    @url_addresses = UrlAddress.all
+    render @url_addresses
+  end
+
   private
 
   def accepted_params
-    params.require(:url).permit(:address)
+    params.require(:url_address).permit(:url)
   end
 end
