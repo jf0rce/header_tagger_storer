@@ -6,7 +6,7 @@ class UrlAddressesController < ApplicationController
 
   def index
     @url_addresses = UrlAddress.all
-    render @url_addresses
+    render json: @url_addresses
   end
 
   private
